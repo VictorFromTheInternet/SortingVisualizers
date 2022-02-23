@@ -1,11 +1,11 @@
-## Classes:
+# Classes:
 - Rectangles
     - Rectangles() // constructor
     - changeColor()
     - swap()
     - output()
 
-## Functions:
+# Functions:
 - setup() 
    - generates rect array
 - draw()
@@ -19,11 +19,11 @@
 - checkSortedRectangles()
    - updates a global boolean
 
-# Sorting functions: 
+## Sorting functions: 
 - selSortInc()
    - increments global variables for selSort
 - selectionSort()
 
 
-# notes
+## notes
 - a WIP, code is a bit messy right now
