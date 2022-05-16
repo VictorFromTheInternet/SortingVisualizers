@@ -1,6 +1,6 @@
 
 
-class Rectangles
+class Rectangle
 {
   // "Private var"
   int X;
@@ -9,7 +9,7 @@ class Rectangles
   color c;
   
   // constructor
-    Rectangles(int Xpos, int Wlength, int Hlength, color Color)
+    Rectangle(int Xpos, int Wlength, int Hlength, color Color)
     {
       X = Xpos;
       w = Wlength;
@@ -17,9 +17,12 @@ class Rectangles
       c = Color;
     }
     
-    Rectangles()  // default constructor
+    Rectangle()  // default constructor
     {
-      
+      X = 
+      w = 
+      h =
+      c = color(255);
     }
     
   // change color function
@@ -29,9 +32,9 @@ class Rectangles
     }
     
   // swap function (height values)
-    void swap(Rectangles[] arr, int left, int right)
+    void swap(Rectangle[] arr, int left, int right)
     {
-      Rectangles temp = new Rectangles();
+      Rectangle temp = new Rectangle();
       temp.h = arr[left].h;
       arr[left].h = arr[right].h;
       arr[right].h = temp.h;
