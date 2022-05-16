@@ -17,13 +17,15 @@ void selSortInc()
   
   
   
+  
+  
 //*********************************************************
 //
 //                    Sorting Functions
 //
 //**********************************************************
   // selection sort
-  void selectionSort(Rectangles arr[]) //throws InterruptedException
+  void selectionSort(Rectangle arr[]) //throws InterruptedException
   {    
     
     // step through the array using global var (I + J)
@@ -33,24 +35,32 @@ void selSortInc()
     int smallest = I;
     
     selectedRectangles(arr, location, current);
+   
     for(current = location; current<arr.length; current++ ){       
           if(arr[smallest].h > arr[current].h) // compare, update smallest
             smallest = current;        
         }
     if(current == arr.length) // swap
         arr[0].swap(arr, location, smallest); 
-        
+       
     
   }// end of sel sort
   
   
+  void SelSortImproved(Rectangle arr[]){
+    // keeping track of "smallest" & "largest"
+    // swapping the respective indexes at the same time
+    // indexes searched through decreases each loop -2
+  }
+  
+  
   // bubble sort
-  void bubbleSort()
-  {}
+  void bubbleSort(Rectangle arr[]){ 
+  }
   
   
   // insertion sort
-  void insertionSort()
-  {}
+  void insertionSort(Rectangle arr[]){
+  }
   
   
