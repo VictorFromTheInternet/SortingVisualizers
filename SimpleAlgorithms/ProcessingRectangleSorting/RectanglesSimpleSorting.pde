@@ -7,11 +7,11 @@ import javax.swing.*;
 
 
 // declarations, "constants", objs, increment var
-int NUM_RECT = 50;
+int NUM_RECT = selectNumRect();
 boolean sorted = false;
   
 Random rand = new Random();
-Rectangles[] rect = new Rectangles[NUM_RECT];
+Rectangle[] rect = new Rectangle[NUM_RECT];
 
 int I = 0;
 int J = 0;
@@ -19,7 +19,7 @@ int smallest = I;
 
   
 void setup(){
-  frameRate(240);
+  frameRate(30);
   size(1000,500); 
     
   // initialize array of rect
@@ -27,7 +27,7 @@ void setup(){
   int Xpos = 0;
   int recWidth = 1000/NUM_RECT;
     for(int i = 0; i < rect.length; i++){
-      rect[i] = new Rectangles(Xpos, recWidth, rand.nextInt(500), white);
+      rect[i] = new Rectangle(Xpos, recWidth, rand.nextInt(500), white);
       Xpos+=recWidth;
      }
     
@@ -72,13 +72,20 @@ void draw()
 
 
 
-void outputRectangles(Rectangles arr[]){
+int selectNumRect()
+{
+  String str = JOptionPane.showInputDialog("Please enter the number of rectangles to sort: ");
+  return Integer.parseInt(str);
+}
+
+
+void outputRectangles(Rectangle arr[]){
     for(int i = 0; i < arr.length; i++)
       arr[i].output();
 } // end of output rectangles
 
 
-void selectedRectangles(Rectangles[] arr, int left, int right){
+void selectedRectangles(Rectangle[] arr, int left, int right){
   color white = color(255,255,255);
   color red = color(255,0,0);
       
@@ -93,7 +100,7 @@ void selectedRectangles(Rectangles[] arr, int left, int right){
 }// and of selected rectangles (change rect color)
 
 
-void checkSortedRectangles(Rectangles arr[])
+void checkSortedRectangles(Rectangle arr[])
 {
   // check if i < rightSide, (every position)
   for(int i = 0; i<(arr.length-1); i++){
@@ -107,6 +114,3 @@ void checkSortedRectangles(Rectangles arr[])
   }
   
 }// end of sorted rect ()   
-  
-  
-  
